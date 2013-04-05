@@ -2,6 +2,7 @@ server: true
 markdown: kramdown
 permalink: pretty
 pygments: true
+paginate: 10
 
 kramdown:
   auto_ids: false
