@@ -1,0 +1,549 @@
+﻿@import "common.less";
+
+/*
+   General
+*/
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Abel', sans-serif;
+  font-size: 16px;
+  background: url("../../img/default/bgpattern.png") repeat scroll 0 0 transparent;
+  min-width: @min-width;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: @blue;
+}
+
+a:hover {
+  text-decoration: none;
+  color: @emph;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#content {
+  padding-bottom: @footer-height;
+}
+
+#content-container:before {
+  display: block;
+  content: " ";
+  height: @header-height;
+}
+
+/*
+  Additional Responsive Class for larger desktop
+*/
+
+.visible-large-screen {
+  display: inherit !important;
+}
+
+@media (max-width: @large-screen) {
+  .visible-large-screen {
+    display: none !important;
+  }
+}
+
+.btn-blue {
+  background-color: hsl(206, 49%, 35%) !important;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#5493c4), to(#2d5f84));
+  background-image: -moz-linear-gradient(top, #5493c4, #2d5f84);
+  background-image: -ms-linear-gradient(top, #5493c4, #2d5f84);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5493c4), color-stop(100%, #2d5f84));
+  background-image: -webkit-linear-gradient(top, #5493c4, #2d5f84);
+  background-image: -o-linear-gradient(top, #5493c4, #2d5f84);
+  background-image: linear-gradient(#5493c4, #2d5f84);
+  border-color: #2d5f84 #2d5f84 hsl(206, 49%, 30%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
+  -webkit-font-smoothing: antialiased;
+
+  .caret {
+    border-bottom-color: #FFFFFF;
+    border-top-color: #FFFFFF;
+  }
+
+}
+
+.btn-yellow {
+  background-color: hsl(46, 100%, 57%) !important;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ffe389), to(#fecb23));
+  background-image: -moz-linear-gradient(top, #ffe389, #fecb23);
+  background-image: -ms-linear-gradient(top, #ffe389, #fecb23);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffe389), color-stop(100%, #fecb23));
+  background-image: -webkit-linear-gradient(top, #ffe389, #fecb23);
+  background-image: -o-linear-gradient(top, #ffe389, #fecb23);
+  background-image: linear-gradient(#ffe389, #fecb23);
+  border-color: #fecb23 #fecb23 hsl(46, 100%, 52%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.33);
+  -webkit-font-smoothing: antialiased;
+
+  .caret {
+    border-bottom-color: #FFFFFF;
+    border-top-color: #FFFFFF;
+  }
+}
+
+.iconf-8x {
+  font-size: 8em;
+}
+
+// Will not work well in buttons/navs, would require more rules
+.iconf-larger {
+  vertical-align: -10%;
+  font-size: 1.5em;
+}
+
+/*
+    Header
+*/
+
+header { //  background-color: @greyDark;
+  background: url("../../img/default/bgpatterndark.png") repeat;
+  height: @header-height;
+  position: fixed;
+  top: 0;
+  vertical-align: top;
+  width: 100%;
+  z-index: 10;
+  min-width: @min-width;
+  color: #ffffff;
+}
+
+header a {
+  color: #ffffff;
+}
+
+header:before {
+  position: absolute;
+  content: ' ';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: -1;
+  .default-shadow;
+}
+
+header div.left {
+  position: relative;
+  padding-left: 20px;
+  height: @header-height;
+  float: left; //  border-right: 1px solid;
+}
+
+header div.right {
+  padding-right: 20px;
+}
+
+header span.title {
+  color: white;
+  float: left;
+  font-family: SansationRegular, sans-serif;
+  font-size: 40px;
+  line-height: @header-height;
+  cursor: default;
+}
+
+header .logo {
+  float: left;
+  margin-right: 10px;
+  margin-top: 12px;
+  width: 105px;
+  height: 107px;
+  background: url("../../img/default/logo.png") no-repeat;
+}
+
+.header_block {
+  float: right; //  font-family: SansationRegular, sans-serif;
+  margin: 10px 8px 0;
+  line-height: 18px;
+  font-size: small;
+
+  .btn {
+    margin-top: 6px;
+  }
+
+}
+
+.iconbar {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  text-shadow: @blue 2px 2px 2px;
+
+  i {
+    cursor: pointer;
+  }
+
+  i:hover {
+    color: @yellow;
+  }
+
+}
+
+// Responsive Borders
+.header_block.left-border {
+  background: url("../../img/default/box-separator.png") repeat-y;
+  padding-left: 1%;
+}
+
+.header_block.right-border {
+  background: url("../../img/default/box-separator.png") repeat-y right;
+  padding-right: 1%;
+
+  .pull-right {
+    color: @yellow;
+  }
+
+}
+
+@media (max-width: @large-screen) {
+  .header_block {
+    background: none !important;
+    padding: 0 !important;
+  }
+}
+
+#progress-area {
+  position: relative;
+  float: right;
+  width: 26%;
+  margin-top: 12px;
+  margin-right: 15px;
+  line-height: 16px;
+
+  #progress-info {
+    padding-left: 2px;
+  }
+
+  .sub {
+    font-size: small;
+    padding: 0 2px;
+  }
+
+  .popover { //    display: block;
+    max-width: none;
+    width: 120%;
+    left: -60%; // Half of width
+    margin-left: 50%;
+    top: 100%;
+  }
+
+  .popover-title, .popover-content {
+    color: @greyDark;
+  }
+
+  .iconf-list {
+    cursor: pointer;
+    margin-right: 2px; // same as globalprogress margin
+
+    &:hover {
+      color: @yellow;
+    }
+  }
+  .close {
+    line-height: 14px;
+  }
+}
+
+.progress-list {
+  list-style: none;
+  margin: 0;
+  font-size: small;
+
+  li {
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    background-position: 0px 8px;
+    padding-left: 40px;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+      border-bottom: 1px dashed @greyLight;
+    }
+
+    .progress {
+      height: 8px;
+      margin-bottom: 0;
+
+      .bar {
+        .gradient(bottom, @blue, @blueLight);
+      }
+    }
+  }
+}
+
+#globalprogress {
+  background-color: @greyDark;
+  background-image: none;
+  height: 8px;
+  margin: 4px 0;
+  border-radius: 8px;
+  border: 2px solid @grey;
+
+  .bar {
+    color: @dark;
+    background-image: none;
+    background-color: @yellow;
+
+    &.running {
+      width: 100%;
+      .stripes(@yellowLighter, @yellowDark);
+    }
+
+  }
+
+}
+
+#speedgraph {
+  float: right;
+  width: 14%;
+  height: 60px; // similiar as header_box
+  margin: 8px 8px 0 8px;
+  font-family: sans-serif
+}
+
+.header-area {
+  display: none; // hidden by default
+  position: absolute;
+  bottom: -28px;
+  line-height: 18px;
+  top: @header-height;
+  padding: 4px 10px 6px 10px;
+  text-align: center;
+  border-radius: 0 0 6px 6px;
+  color: @light;
+  background-color: @greyDark;
+  .default-shadow;
+}
+
+#notification-area {
+  .header-area;
+  left: 140px;
+
+  .badge {
+    vertical-align: top;
+  }
+
+  .btn-query, .btn-notification {
+    cursor: pointer;
+  }
+}
+
+#selection-area {
+  .header-area;
+  left: 50%;
+  min-width: 15%;
+
+  i {
+    cursor: pointer;
+
+    &:hover {
+      color: @yellow;
+    }
+  }
+
+}
+
+/*
+   Actionbar
+*/
+
+.nav > li > a:hover {
+  color: @blue;
+}
+
+.actionbar {
+  padding-bottom: 3px;
+  margin-bottom: 0;
+  border-bottom: 1px dashed @grey;
+
+  height: @actionbar-height;
+
+  padding-top: 2px;
+  margin-bottom: 5px;
+
+}
+
+.actionbar > li > a {
+  margin-top: 4px;
+}
+
+.actionbar .breadcrumb {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 0;
+
+  .active {
+    color: @grey;
+  }
+
+}
+
+.actionbar form {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.actionbar input, .actionbar button {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.actionbar .dropdown-menu i {
+  margin-top: 4px;
+  padding-right: 5px;
+}
+
+/*
+    Login
+*/
+.login {
+  vertical-align: middle;
+  border: 2px solid @dark;
+  padding: 15px 50px;
+  font-size: 17px;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+
+/*
+    Footer
+*/
+footer { //  background-color: @greyDark;
+  background: url("../../img/default/bgpatterndark.png") repeat;
+  color: @grey;
+  height: @footer-height;
+  margin-top: -@footer-height;
+  position: relative;
+  width: 100%;
+  line-height: 16px;
+  z-index: 10;
+}
+
+footer .logo {
+  background: url(../../img/default/logo_grey.png) no-repeat;
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin-top: 12px;
+  margin-right: 12px;
+}
+
+footer div.center {
+  padding-top: 8px;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer:before {
+  position: absolute;
+  content: ' ';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  box-shadow: 0 0 5px black;
+  z-index: -1;
+}
+
+footer .block {
+  font-size: 12px;
+  float: left;
+  margin: 0;
+  width: 150px;
+  padding-top: 6px;
+  padding-right: 30px;
+}
+
+footer .copyright {
+  text-align: center;
+  width: auto;
+  padding-top: 22px;
+}
+
+footer h2 {
+  background: url("../../img/default/double-line.gif") repeat-x scroll center bottom transparent !important;
+  color: #FFFFFF;
+  font-family: SansationLight, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 16px;
+  margin: 0;
+  padding-bottom: 6px;
+}
+
+/*
+   Modal Overlay
+*/
+#modal-overlay {
+  content: " ";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: -moz-radial-gradient(center, ellipse cover, rgba(236, 208, 66, 0) 0%, rgba(40, 119, 171, 0.9) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(236, 208, 66, 0)), color-stop(100%, rgba(40, 119, 171, 0.9)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(236, 208, 66, 0) 0%, rgba(40, 119, 171, 0.9) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(236, 208, 66, 0) 0%, rgba(40, 119, 171, 0.9) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(236, 208, 66, 0) 0%, rgba(40, 119, 171, 0.9) 100%);
+  background: radial-gradient(center, ellipse cover, rgba(236, 208, 66, 0) 0%, rgba(40, 119, 171, 0.9) 100%);
+  z-index: 100;
+  opacity: 0;
+}
+
+div.modal-header {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: @blueDark;
+  color: #FFFFFF;
+
+  .close {
+    color: @light;
+  }
+
+}
+
+.select2-container {
+  min-width: 220px; // same as other input fields
+}
+
+div.modal-body {
+  max-height: 100%;
+}
+
+div.modal {
+  width: 600px;
+
+}

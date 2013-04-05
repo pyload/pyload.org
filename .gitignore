@@ -1,0 +1,6 @@
+_import/
+_site/
+.DS_Store
+*.swp
+*.swo
+*~

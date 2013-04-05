@@ -1,0 +1,19 @@
+server: true
+markdown: kramdown
+permalink: pretty
+pygments: true
+
+kramdown:
+  auto_ids: false
+
+exclude:
+  - config
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - README.md
+
+locale:
+    test:
+        en: "Hello"
+        de: "Hallo"
