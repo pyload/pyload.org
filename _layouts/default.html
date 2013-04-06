@@ -3,19 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="pyLoad WebUI">
+    <meta name="description" content="pyLoad Download Manager">
     <meta name="viewport" content="width=device-width">
 
-    <!-- TODO Include this font -->
-    <link href="http://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css"/>
     <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="/static/css/font.css" rel="stylesheet" type="text/css"/>
     <link href="/static/css/fontawesome.css" rel="stylesheet" type="text/css"/>
     <link href="/static/css/default/style.less" rel="stylesheet/less" type="text/css" media="screen"/>
 
     <script src="/static/js/less-1.3.0.min.js" type="text/javascript"></script>
+    <script src="/static/js/holder.js"></script> <!-- Remove when finished! -->
     {% if page.title != null %}
-    <title>pyLoad - {{ page.title }}</title>
+    <title>{{ page.title }} - pyLoad</title>
     {% else %}
     <title>pyLoad Download Manager</title>
     {% endif %}

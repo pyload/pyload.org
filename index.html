@@ -1,5 +1,19 @@
 ---
-layout: frontpage
+layout: nil
 ---
 
-Hello world!
+<html>
+  <head>
+    <script type="text/javascript">
+      var languages = {
+        "en-US": "en",
+        "de":    "de"
+      };
+
+      var language = languages[window.navigator.language];
+      if (language == undefined) { language = 'en'; }
+
+      document.location = "/" + language;
+    </script>
+  </head>
+</html>
