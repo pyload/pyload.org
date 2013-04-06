@@ -4,14 +4,13 @@
 /*
     Header
 */
-// Same as bootstraps
+// Overwrite variables
 @header-height: 40px;
-
-.header { //  background-color: @greyDark;
-  background: url("../../img/default/bgpatterndark.png") repeat;
-}
+@footer-height: 65px;
+@min-width: auto;
 
 .navbar-inner {
+  width: 100%;
   height: @header-height;
 }
 
@@ -36,6 +35,7 @@
 
 .brand {
   max-height: @header-height / 2;
+  padding-right: @header-height !important;
 }
 
 .header .logo {
@@ -47,13 +47,16 @@
   background-size: 85px 87px;
 }
 
+
+// TODO: improve footer and backport
+
 /*
     Footer
 */
 footer { //  background-color: @greyDark;
   background: url("../../img/default/bgpatterndark.png") repeat;
   color: @grey;
-  height: @footer-height;
+  min-height: @footer-height;
   margin-top: -@footer-height;
   position: relative;
   width: 100%;
@@ -66,15 +69,6 @@ footer .logo {
   float: left;
   width: 60px;
   height: 60px;
-  margin-top: 12px;
-  margin-right: 12px;
-}
-
-footer div.center {
-  padding-top: 8px;
-  width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 footer:before {
@@ -89,24 +83,31 @@ footer:before {
   z-index: -1;
 }
 
-footer .block {
+footer .span2 {
   font-size: 12px;
-  float: left;
-  margin: 0;
-  width: 150px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+// This is the copyright span
+footer .offset1 {
   padding-top: 6px;
-  padding-right: 30px;
+  padding-bottom: 0;
 }
 
 footer .copyright {
+  background: url(../../img/default/logo_grey.png) no-repeat;
+  background-size: 60px 60px;
+  background-position: 8px center;
+  height: 60px;
+  padding-left: 60px;
+  padding-top: 24px;
   text-align: center;
-  width: auto;
-  padding-top: 22px;
 }
 
 footer h2 {
   background: url("../../img/default/double-line.gif") repeat-x scroll center bottom transparent !important;
-  color: #FFFFFF;
+  color: @light;
   font-family: SansationLight, sans-serif;
   font-size: 16px;
   font-weight: normal;
