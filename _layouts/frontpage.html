@@ -3,54 +3,45 @@ layout: default
 ---
 <div class="row-fluid animated fadeInDown">
     <div class="span10 offset1">
-        <!--<div class="container animated fadeInDown">-->
-            <div id="myCarousel" class="carousel slide">
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-                <!-- Carousel items -->
-                <div class="carousel-inner">
-                    <div class="active item">
-                        <div class="row-fluid">
-                            <div class="span6">
-                                <img data-src="holder.js/500x400" alt="">
-                            </div>
-                            <div class="span6">
-                                <h1>pyLoad
-                                    <small>Download Manager</small>
-                                </h1>
-                                <p>Fast, lightweight and full featured download manager</p>
-                                <br>
-                                <a href="#" class="btn btn-large btn-success animated tada">Get started today</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="row-fluid">
-                            <div class="span6 animated fadeInDownBig">
-                                <img data-src="holder.js/500x400" alt="">
-                            </div>
-                            <div class="span6 animated fadeInUpBig">
-                                <h1>pyLoad
-                                    <small>Download Manager</small>
-                                </h1>
-                                <p>Fast, lightweight and full featured download manager</p>
-                                <a href="#" class="btn btn-large btn-success">Get started today</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        Additional content
+        <div id="myCarousel" class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="active item">
+                    <img data-src="holder.js/500x400" class="pull-left">
+
+                    <div class="slide">
+                        <h1>pyLoad
+                            <small>Download Manager</small>
+                        </h1>
+                        <p>Fast, lightweight and full featured download manager</p>
+                        <br>
+                        <a href="#" class="btn btn-large btn-success animated tada">Get started today</a>
                     </div>
                 </div>
-                <!-- Carousel nav -->
-                <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                <div class="item">
+                    <div class="slide animated fadeInUpBig pull-left">
+                        <h1>pyLoad
+                            <small>Download Manager</small>
+                        </h1>
+                        <p>Fast, lightweight and full featured download manager</p>
+                        <a href="#" class="btn btn-large btn-success">Get started today</a>
+                    </div>
+                    <img data-src="holder.js/500x400" class="animated fadeInDownBig">
+                </div>
+            <div class="item">
+                Additional content
             </div>
-        <!--</div>-->
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div>
+</div>
 </div>
 
 {{ content }}
