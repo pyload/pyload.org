@@ -1,6 +1,5 @@
 ﻿@import "base.less";
 
-
 /*
     Header
 */
@@ -48,12 +47,14 @@ header .logo {
   background-size: 85px 87px;
 }
 
+#content-container {
+  padding-top: 50px;
+}
 
 /*
     Footer
 */
-footer {
-  // Same gradient as navbar
+footer { // Same gradient as navbar
   .gradient(top, #222222, #111111);
   color: @grey;
   min-height: @footer-height;
@@ -112,12 +113,86 @@ footer .copyright {
 }
 
 footer h2 {
-//  background: url("../../img/default/double-line.gif") repeat-x scroll center bottom transparent !important;
   color: @light;
   font-family: SansationLight, sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 16px;
   margin: 0;
-//  padding-bottom: 6px;
+}
+
+/*
+  Other
+*/
+
+hr { //  border-color: @grey;
+}
+
+/*
+ Carousel
+ */
+
+.carousel-control {
+  background: none repeat scroll 0 0 #222222;
+  border: 3px solid #FFFFFF;
+  border-radius: 23px 23px 23px 23px;
+  color: #FFFFFF;
+  font-size: 35px;
+  font-weight: bold;
+  height: 30px;
+  left: 15px;
+  line-height: 23px;
+  margin-top: -20px;
+  opacity: 1;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 30px;
+}
+
+.carousel-inner {
+  height: 250px;
+
+  .item {
+    padding: 0 70px;
+  }
+}
+
+/*
+  Sections
+*/
+
+.section_header {
+  color: @greyDarker;
+  font-weight: bolder;
+  margin-bottom: 40px;
+  margin-top: 80px;
+  position: relative;
+  text-align: center;
+
+  &.left span {
+    margin-left: 0;
+    text-align: left;
+  }
+  hr {
+    border-bottom: 2px solid @light;
+    border-top: 1px solid #BEC0C3;
+    position: absolute;
+    width: 36%;
+  }
+  hr.right {
+    right: 0;
+    top: 0;
+  }
+  span {
+    display: block;
+    margin: 0 auto;
+    width: 27%;
+  }
+  small {
+    color: @grey;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 20px;
+  }
 }
