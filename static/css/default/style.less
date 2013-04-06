@@ -14,7 +14,7 @@
   height: @header-height;
 }
 
-.header:before {
+header:before {
   position: absolute;
   content: ' ';
   top: 0;
@@ -26,7 +26,7 @@
   .default-shadow;
 }
 
-.header a.title {
+header a.title {
   color: white;
   font-family: SansationRegular, sans-serif;
   font-size: @header-height / 1.5;
@@ -38,8 +38,9 @@
   padding-right: @header-height !important;
 }
 
-.header .logo {
+header .logo {
   float: left;
+  margin-top: -4px;
   margin-right: 10px;
   width: 85px;
   height: 87px;
@@ -48,13 +49,16 @@
 }
 
 
-// TODO: improve footer and backport
-
 /*
     Footer
 */
 footer { //  background-color: @greyDark;
-  background: url("../../img/default/bgpatterndark.png") repeat;
+  background-color: #1B1B1B;
+  background-image: linear-gradient(to bottom, #222222, #111111);
+  background-repeat: repeat-x;
+  border-color: #252525;
+
+//  background: url("../../img/default/bgpatterndark.png") repeat;
   color: @grey;
   min-height: @footer-height;
   margin-top: -@footer-height;
@@ -69,6 +73,12 @@ footer .logo {
   float: left;
   width: 60px;
   height: 60px;
+}
+
+footer hr {
+  margin: 4px 0;
+  border-top-color: @greyDarker;
+  border-bottom-color: @greyDark;
 }
 
 footer:before {
@@ -106,12 +116,12 @@ footer .copyright {
 }
 
 footer h2 {
-  background: url("../../img/default/double-line.gif") repeat-x scroll center bottom transparent !important;
+//  background: url("../../img/default/double-line.gif") repeat-x scroll center bottom transparent !important;
   color: @light;
   font-family: SansationLight, sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 16px;
   margin: 0;
-  padding-bottom: 6px;
+//  padding-bottom: 6px;
 }
