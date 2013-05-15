@@ -64,19 +64,6 @@ footer { // Same gradient as navbar
   z-index: 10;
 }
 
-footer .logo {
-  background: url(../../img/default/logo_grey.png) no-repeat;
-  float: left;
-  width: 60px;
-  height: 60px;
-}
-
-footer hr {
-  margin: 4px 0;
-  border-top-color: @greyDarker;
-  border-bottom-color: @greyDark;
-}
-
 footer:before {
   position: absolute;
   content: ' ';
@@ -87,6 +74,12 @@ footer:before {
   background-color: transparent;
   box-shadow: 0 0 5px black;
   z-index: -1;
+}
+
+footer hr {
+  margin: 4px 0;
+  border-top-color: @greyDarker;
+  border-bottom-color: @greyDark;
 }
 
 footer .span2 {
@@ -199,4 +192,15 @@ footer h2 {
     font-size: 16px;
     margin-left: 20px;
   }
+}
+
+.animated.slow {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
