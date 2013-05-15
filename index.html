@@ -1,10 +1,8 @@
 ---
-layout: nil
+layout: frontpage
+lang: en
 ---
-
-<html>
-  <head>
-    <script type="text/javascript">
+<script type="text/javascript">
       var languages = {
         "en-US": "en",
         "de":    "de"
@@ -13,7 +11,89 @@ layout: nil
       var language = languages[window.navigator.language];
       if (language == undefined) { language = 'en'; }
 
-      document.location = "/" + language;
-    </script>
-  </head>
-</html>
+      // TODO option to avoid redirect
+
+      if (language !== 'en')
+          document.location = "/" + language;
+</script>
+<div class="row-fluid">
+
+    <div class="span10 offset1">
+
+        <h2 class="section_header">
+            <hr class="left visible-desktop">
+            <span>Introduction</span>
+            <hr class="right visible-desktop">
+        </h2>
+        <p>pyLoad is a fast, lightweight and full featured download manager for many One-Click-Hoster, container formats
+            like DLC, video sites or just plain http/ftp links. It aims for low hardware requirements and platform
+            independence to be runnable on all kind of systems (desktop pc, netbook, NAS, router).</p>
+
+        <p>Despite its strict restriction it is packed full of features just like webinterface, captcha recognition,
+            unrar and much more.</p>
+
+        <h2 class="section_header">
+            <hr class="left visible-desktop">
+            <span>Advantages</span>
+            <hr class="right visible-desktop">
+        </h2>
+
+        <p>Some main advantages at a glance:</p>
+        <ul>
+            <li>completely written in python</li>
+            <li>low hardware requirements</li>
+            <li>features many One-Click-Hoster</li>
+            <li>including premium support, captcha recognition, reconnect feature</li>
+            <li>DLC, CCF, RSDF support</li>
+            <li>easily remote accessible via webinterface or GUI</li>
+            <li>free support at irc or forum</li>
+            <li>released under GPL</li>
+        </ul>
+
+        <p>Below you find an excerpt of pyLoads plugins and features. For more information and some tutorials take a
+            look into the <a href="http://pyload.org/wiki">pyLoad Community Wiki</a>.</p>
+
+        <h2 class="section_header">
+            <hr class="left visible-desktop">
+            <span>Features</span>
+            <hr class="right visible-desktop">
+        </h2>
+
+
+        <div class="row-fluid" id="content">
+            <div class="span4 well">
+                <h2>Heading</h2>
+
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                    mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+                    euismod.
+                    Donec sed odio dui. </p>
+
+                <p><a href="#" class="btn">View details »</a></p>
+            </div>
+            <div class="span4 well">
+                <h2>Heading</h2>
+
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                    mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+                    euismod.
+                    Donec sed odio dui. </p>
+
+                <p><a href="#" class="btn">View details »</a></p>
+            </div>
+            <div class="span4 well">
+                <h2>Heading</h2>
+
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
+                    porta
+                    felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                    fermentum
+                    massa.</p>
+
+                <p><a href="#" class="btn">View details »</a></p>
+            </div>
+        </div>
+    </div>
+</div>
