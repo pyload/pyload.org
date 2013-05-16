@@ -8,11 +8,11 @@ layout: news
     <h4>{{ p.subtitle }}</h4>
     {% endif %}
     <p>
-    {{ p.content | markdownify | strip_html | truncatewords: 25 }} 
+    {{ p.excerpt }}
     </p>
-        <p><a href="{{ post.url }}">Continue</a></p>
+        <p><a href="{{ p.url }}">Continue</a></p>
     </div>
-    {% endfor %}
+{% endfor %}
 
 <div class="pagination">
 <div class="row">

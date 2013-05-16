@@ -1,9 +1,9 @@
-server: true
-auto: true
 markdown: kramdown
 permalink: pretty
+relative_permalinks: false
 pygments: true
 paginate: 10
+pagination_path: news/page:num
 
 kramdown:
   auto_ids: false
@@ -14,6 +14,21 @@ exclude:
   - Gemfile.lock
   - Rakefile
   - README.md
+
+# Currently unused
+assets:
+  sources:
+    - _assets/js
+    - _assets/css
+    - _assets/css/default
+    - _assets/fonts
+    - _assets/img
+
+  compress:
+    css:  sass
+    js:   uglifier
+
+  cachebust: soft
 
 locale:
     test:
