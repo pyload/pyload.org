@@ -15,20 +15,16 @@ exclude:
   - Rakefile
   - README.md
 
-# Currently unused
 assets:
+
   sources:
-    - _assets/js
-    - _assets/css
-    - _assets/css/default
-    - _assets/fonts
-    - _assets/img
+    - _assets
 
   compress:
     css:  sass
     js:   uglifier
 
-  cachebust: soft
+  cachebust: none
 
 locale:
     test:
