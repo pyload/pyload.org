@@ -3,91 +3,171 @@ layout: default
 lang: en
 ---
 <script type="text/javascript">
-      var languages = {
+    var languages = {
         "en-US": "en",
-        "de":    "de"
-      };
+        "de": "de"
+    };
 
-      var language = languages[window.navigator.language];
-      if (language == undefined) { language = 'en'; }
+    var language = languages[window.navigator.language];
+    if (language == undefined) {
+        language = 'en';
+    }
 
-      // TODO option to avoid redirect
-
-      if (language !== 'en')
-          document.location = "/" + language;
+    // TODO option to avoid redirect
+    if (language !== 'en')
+        document.location = "/" + language;
 </script>
-<div class="row-fluid">
+<div class="row-fluid" id="content">
     <div class="span10 offset1">
-        <div class="row-fluid" id="content">
-            <div class="row-fluid">
-                <div class="span5">
-                    <div class="span12 well">
-                        <h1>pyLoad
+        <div class="row-fluid">
+            <div class="span5">
+                <div class="well">
+                    <h1>pyLoad
                         <small>Download Manager</small>
-                        </h1>
-                        <p>Fast, lightweight and full featured download manager</p>
-                        <br>
-                        <a href="#" class="btn btn-large btn-primary">Download pyLoad 0.5</a>
-                    </div>
-                    <div class="span12">
-                        <h2>About</h2>
-                        <p>Started as an experiment to avoid annoying wait time at Rapidshare & co, developet pyLoad to a powerfull downloader with many features and support for all most common and uncommen hosters, crypters and video platforms.
-                            It aims for low hardware requirements and platform independence to be runnable on casual Windows, Mac and Linux Systems as well as on routers, NAS and Servers.
-                            Furthermore to be flexible, it is controllable with a webinterface, terminal, Andoird/iOS App and even IRC and XMAPP.
-                            Aswell a goal is to safe resources, so it is very lightwidht and fast.</p>
-                    </div>
+                    </h1>
+                    <p>Fast, lightweight and full featured download manager</p>
+                    <br>
+                    <a href="#" class="btn btn-large btn-primary">Download pyLoad 0.5</a>
                 </div>
-                <div class="span7">
-                    <div id="myCarousel" class="carousel slide">
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
-                        <h2>Features</h2>
-                        <!-- Carousel items -->
-                        <div class="carousel-inner features">
-                            <div class="active item">
-                                <h3>Hosters & Crypters
-                                    <ul><small>More than 120 hosters and 50 crypters are supported as well as over 60 premium hoster accounts</small></ul>
-                                </h3>
-                                <h3>Flexible
-                                    <ul><small>as entire written in Python, easy installable on local Windows, Mac or Linux System, NAS, Server and Router</small></ul>
-                                </h3>
-                                <h3>Remote Control
-                                    <ul><small>manage your downloads via a Webinterface, Terminal, Android or iOS App, IRC or XMPP</small></ul>
-                                </h3>
-                                <img src="static/img/screen.jpg" class="pull-left">
-                                </h3>
-                            </div>
-                            <div class="item">
-                                <h3>Captcha Recognition
-                                    <ul><small>Automatically solve captchas or use CaptchaTrader</small></ul>
-                                </h3>
-                                <h3>Plugins
-                                    <ul><small>Unpack archives, testing Checksums, download scheduler, reconnets, external scripts, Click'n'Load and many more</small></ul>
-                                </h3>
-                                <h3>Lightwight
-                                    <ul><small>pyLoad needs very low resources of RAM and HDD</small></ul>
-                                </h3>
-                                <img src="static/img/screen2.jpg" class="pull-left">
-                            </div>
-                            <div class="item">
-                                <h3>Easy to extend
-                                    <ul><small>offers an easy API to create own plugins and share with the community</small></ul>
-                                </h3>
-                                <h3>Community
-                                    <ul><small>helpfull and friendly support in the IRC channel and forum</small></ul>
-                                </h3>
-                                <h3>Open Source
-                                    <ul><small>released under GPL license, all sources avaible at github</small></ul>
-                                <img src="static/img/screen3.jpg" class="pull-left">
-                            </div>
+                <div>
+                    <h2>About</h2>
+
+                    <p>Started as an experiment to avoid annoying wait time at Rapidshare & co, developet pyLoad to
+                        a powerfull downloader with many features and support for all most common and uncommen
+                        hosters, crypters and video platforms.
+                        It aims for low hardware requirements and platform independence to be runnable on casual
+                        Windows, Mac and Linux Systems as well as on routers, NAS and Servers.
+                        Furthermore to be flexible, it is controllable with a webinterface, terminal, Andoird/iOS
+                        App and even IRC and XMAPP.
+                        Aswell a goal is to safe resources, so it is very lightwidht and fast.</p>
+                </div>
+            </div>
+            <div class="span7">
+                <div id="myCarousel" class="carousel slide">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <h2>Features</h2>
+                    <!-- Carousel items -->
+                    <div class="carousel-inner features">
+                        <div class="active item">
+                            <h3>Hosters & Crypters
+                                <ul>
+                                    <small>More than 120 hosters and 50 crypters are supported as well as over 60
+                                        premium hoster accounts
+                                    </small>
+                                </ul>
+                            </h3>
+                            <h3>Flexible
+                                <ul>
+                                    <small>as entire written in Python, easy installable on local Windows, Mac or
+                                        Linux System, NAS, Server and Router
+                                    </small>
+                                </ul>
+                            </h3>
+                            <h3>Remote Control
+                                <ul>
+                                    <small>manage your downloads via a Webinterface, Terminal, Android or iOS App,
+                                        IRC or XMPP
+                                    </small>
+                                </ul>
+                            </h3>
+                            <img src="static/img/screen.jpg" class="pull-left">
                         </div>
-                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                        <div class="item">
+                            <h3>Captcha Recognition
+                                <ul>
+                                    <small>Automatically solve captchas or use CaptchaTrader</small>
+                                </ul>
+                            </h3>
+                            <h3>Plugins
+                                <ul>
+                                    <small>Unpack archives, testing Checksums, download scheduler, reconnets,
+                                        external scripts, Click'n'Load and many more
+                                    </small>
+                                </ul>
+                            </h3>
+                            <h3>Lightwight
+                                <ul>
+                                    <small>pyLoad needs very low resources of RAM and HDD</small>
+                                </ul>
+                            </h3>
+                            <img src="static/img/screen2.jpg" class="pull-left">
+                        </div>
+                        <div class="item">
+                            <h3>Easy to extend
+                                <ul>
+                                    <small>offers an easy API to create own plugins and share with the community
+                                    </small>
+                                </ul>
+                            </h3>
+                            <h3>Community
+                                <ul>
+                                    <small>helpfull and friendly support in the IRC channel and forum</small>
+                                </ul>
+                            </h3>
+                            <h3>Open Source
+                                <ul>
+                                    <small>released under GPL license, all sources avaible at github</small>
+                                </ul>
+                            </h3>
+                            <img src="static/img/screen3.jpg" class="pull-left">
+                        </div>
                     </div>
+                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
                 </div>
             </div>
         </div>
+
+        <h2 class="section_header">
+            <hr class="left visible-desktop">
+            <span>Features</span>
+            <hr class="right visible-desktop">
+        </h2>
+
+        <div class="row-fluid">
+            <div class="span4 well">
+                <h2>Heading</h2>
+
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+                    tortor
+                    mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+                    mollis
+                    euismod.
+                    Donec sed odio dui. </p>
+
+                <p><a href="#" class="btn">View details »</a></p>
+            </div>
+            <div class="span4 well">
+                <h2>Heading</h2>
+
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+                    tortor
+                    mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+                    mollis
+                    euismod.
+                    Donec sed odio dui. </p>
+
+                <p><a href="#" class="btn">View details »</a></p>
+            </div>
+            <div class="span4 well">
+                <h2>Heading</h2>
+
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum
+                    id ligula
+                    porta
+                    felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                    nibh, ut
+                    fermentum
+                    massa.</p>
+
+                <p><a href="#" class="btn">View details »</a></p>
+            </div>
+        </div>
     </div>
+</div>

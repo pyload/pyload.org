@@ -7,11 +7,11 @@
             </div>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li {% if page.title == "Downloads" %} class="active" {% endif %}><a href="/downloads">Download</a></li>
-                    <li {% if page.title == "News" %} class="active" {% endif %}><a href="/news">News</a></li>
-                    <li {% if page.title == "Docs" %} class="active" {% endif %}><a href="/docs">Docs</a></li>
-                    <li {% if page.title == "Development" %} class="active" {% endif %}><a href="/development">Development</a></li>
-                    <li {% if page.title == "Forum" %} class="active" {% endif %}><a href="/forum">Forum</a></li>
+                    <li {% if page.section == "download" %} class="active" {% endif %}><a href="/downloads">Download</a></li>
+                    <li {% if page.section == "news" %} class="active" {% endif %}><a href="/news">News</a></li>
+                    <li {% if page.section == "wiki" %} class="active" {% endif %}><a href="/wiki">Wiki</a></li>
+                    <li {% if page.section == "development" %} class="active" {% endif %}><a href="/development">Development</a></li>
+                    <li {% if page.section == "forum" %} class="active" {% endif %}><a href="/forum">Forum</a></li>
                 </ul>
             </div>
         </div>
