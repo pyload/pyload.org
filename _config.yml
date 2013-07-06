@@ -9,22 +9,10 @@ kramdown:
   auto_ids: false
 
 exclude:
-  - config
-  - Gemfile
-  - Gemfile.lock
-  - Rakefile
-  - README.md
+  - static
 
-assets:
-
-  sources:
-    - _assets
-
-  compress:
-    css:  sass
-    js:   uglifier
-
-  cachebust: none
+future: true
+show_drafts: true
 
 locale:
     test:

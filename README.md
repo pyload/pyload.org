@@ -1,15 +1,20 @@
 pyLoad Site
 ===========
 
-To build the site install ruby 1.9 and ruby gems. Afterwards run:
+To build the pyload website you will need:
+
+    - node
+    - npm
+    - ruby
+    - rubygem
+
+If you have these tools installed you can pull other needed dependencies with:
 
     gem install bundler
-    bundle  # To install all other depencencies
+    bundler
+    npm install
+    bower install
 
-You can now generate and run the site with:
+To build the pyload website run:
 
-    jekyll serve
-
-or just generate the site to deploy with:
-
-    jekyll build
+    grunt
