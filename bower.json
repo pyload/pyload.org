@@ -2,6 +2,7 @@
   "name": "pyload.org",
   "version": "0.1.0",
   "dependencies": {
-      "pyload-common": "https://github.com/pyload/pyload-common.git"
+      "pyload-common": "https://github.com/pyload/pyload-common.git",
+      "jquery": "~1.9.0"
   }
 }
