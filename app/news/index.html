@@ -2,38 +2,39 @@
 layout: news
 ---
 {% for p in paginator.posts %}
-    <div class="well">
+<div class="well">
     <h2><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></h2>
     {% if p.subtitle %}
     <h4>{{ p.subtitle }}</h4>
     {% endif %}
     <p>
-    {{ p.excerpt }}
+        {{ p.excerpt }}
     </p>
-        <p><a href="{{ p.url }}">Continue</a></p>
-    </div>
+
+    <p><a href="{{ p.url }}">Continue</a></p>
+</div>
 {% endfor %}
 
 <div class="pagination">
-<div class="row">
-<div class="span2 offset1">
-{% if paginator.previous_page %}
-{% if paginator.previous_page == 1 %}
-<a href="{{ site.url }}" class="previous">Previous</a>
-{% else %}
-<a href="{{ site.url }}/page{{paginator.previous_page}}" class="previous">Previous</a>
-{% endif %}
-{% endif %}
-</div>
+    <div class="row-fluid">
+        <div class="span2 offset1">
+            {% if paginator.previous_page %}
+            {% if paginator.previous_page == 1 %}
+            <a href="{{ site.url }}" class="previous">Previous</a>
+            {% else %}
+            <a href="{{ site.url }}/page{{paginator.previous_page}}" class="previous">Previous</a>
+            {% endif %}
+            {% endif %}
+        </div>
 
-<div class="span2">
-<span class="page_number">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
-</div>
+        <div class="span2">
+            <span class="page_number">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
+        </div>
 
-<div class="span2">
-{% if paginator.next_page %}
-<a href="{{ site.url }}/page{{paginator.next_page}}" class="next">Next</a>
-{% endif %}
-</div>
-</div>
+        <div class="span2">
+            {% if paginator.next_page %}
+            <a href="{{ site.url }}/page{{paginator.next_page}}" class="next">Next</a>
+            {% endif %}
+        </div>
+    </div>
 </div>
