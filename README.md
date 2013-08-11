@@ -11,7 +11,7 @@ To build the pyload website you will need:
 If you have these tools installed you can pull other needed dependencies with:
 
     gem install bundler
-    bundler
+    bundle
     npm install
     bower install
 
