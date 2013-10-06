@@ -331,9 +331,15 @@ module.exports = function(grunt) {
                     },
                     {
                         expand: true,
-                        cwd: '<%= yeoman.app %>/_components/pyload-common/images',
+                        cwd: '<%= yeoman.app %>/_components/pyload-common',
                         src: 'favicon.ico',
                         dest: '.tmp'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= yeoman.app %>/_components/font-awesome/font',
+                        src: '*.*',
+                        dest: '.tmp/static/fonts'
                     }
                 ]
             }
