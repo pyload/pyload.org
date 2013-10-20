@@ -162,23 +162,26 @@ module.exports = function(grunt) {
             }
         },
         jekyll: {
-            // TODO: switch config to options style after
-            // https://github.com/dannygarcia/grunt-jekyll/pull/14
-            dist: {
+            options: {
                 bundleExec: true,
-                src: '<%= yeoman.app %>',
-                dest: '<%= yeoman.dist %>',
-                server: false,
-                auto: false,
-                config: '_config.yml,_config.build.yml'
+                config: '_config.yml,_config.build.yml',
+                src: '<%= yeoman.app %>'
+            },
+            dist: {
+                options: {
+                    dest: '<%= yeoman.dist %>',
+                }
             },
             server: {
-                bundleExec: true,
-                src: '<%= yeoman.app %>',
-                dest: '.jekyll',
-                server: false,
-                auto: false,
-                config: '_config.yml'
+                options: {
+                    config: '_config.yml',
+                    dest: '.jekyll'
+                }
+            },
+            check: {
+                options: {
+                    doctor: true
+                }
             }
         },
         jshint: {
@@ -269,6 +272,17 @@ module.exports = function(grunt) {
                         dest: '<%= yeoman.dist %>'
                     }
                 ]
+            }
+        },
+        compress: {
+            dist: {
+                options: {
+                    mode: 'gzip'
+                },
+                expand: true,
+                cwd: '<%= yeoman.dist %>',
+                dest: '<%= yeoman.dist %>',
+                src: ['**/*.{js,css,html}']
             }
         },
         copy: {
@@ -420,7 +434,8 @@ module.exports = function(grunt) {
         'svgmin',
         'rev',
         'usemin',
-        'htmlmin'
+        'htmlmin',
+        'compress'
     ]);
 
     grunt.registerTask('default', [

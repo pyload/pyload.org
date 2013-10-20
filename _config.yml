@@ -1,4 +1,5 @@
-markdown: kramdown
+# kramdown is broken :(
+markdown: maruku
 permalink: pretty
 relative_permalinks: false
 pygments: true
