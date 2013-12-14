@@ -5,10 +5,7 @@
 </h2>
 <hr>
 <i class="icon-time"></i> Posted on {{ include.post.date | date: "%B %-d, %Y" }}
-in
-{% for tag in include.post.tags %}
-<a href="/news/category/{{tag}}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
-{% endfor %}
+in&nbsp;{% for tag in include.post.tags %}<a href="/news/category/{{tag}}">{{ tag }}</a>{% unless forloop.last %},&nbsp;{% endunless %}{% endfor %}
 <hr>
 
 {% if p.subtitle %}
