@@ -1,0 +1,12 @@
+{% for p in include.posts %}
+
+<div class="post">
+    {% include post_header.html post=p %}
+    <p>
+        {{ p.excerpt }}
+    </p>
+
+    <p><a class="btn btn-blue" href="{{ p.url }}">Read more</a></p>
+</div>
+
+{% endfor %}

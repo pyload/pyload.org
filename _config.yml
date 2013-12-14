@@ -1,10 +1,9 @@
-# kramdown is broken :(
-markdown: maruku
+markdown: kramdown
 permalink: pretty
 relative_permalinks: false
 pygments: true
 paginate: 10
-pagination_path: news/page:num
+paginate_path: news/page:num
 
 kramdown:
   auto_ids: false
@@ -12,10 +11,9 @@ kramdown:
 exclude:
   - static
 
+# Tag plugin
+tag_page_layout: category
+tag_page_dir: news/category
+
 future: true
 show_drafts: true
-
-locale:
-    test:
-        en: "Hello"
-        de: "Hallo"

@@ -1,0 +1,32 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+  <title>pyload News</title>
+  <link href="http://pyload.org/"/>
+  <link type="application/atom+xml" rel="self" href="http://pyload.org/atom.xml"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://pyload.org/</id>
+  <author>
+    <name>pyload Team</name>
+    <email>team@pyload.org</email>
+  </author>
+
+  {% for post in site.posts %}
+  <entry>
+    <id>http://pyload.org{{ post.id }}</id>
+    <link type="text/html" rel="alternate" href="http://pyload.org{{ post.url }}"/>
+    <title>{{ post.title }}</title>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>pyload Team</name>
+      <uri>http://pyload.org/</uri>
+    </author>
+    <content type="html">{{ post.excerpt | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+ 
+</feed>

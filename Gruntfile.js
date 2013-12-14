@@ -30,7 +30,7 @@ module.exports = function(grunt) {
             },
             jekyll: {
                 files: ['<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
-                    '!<%= yeoman.app %>/bower_components'],
+                    '!<%= yeoman.app %>/_components'],
                 tasks: ['jekyll:server']
             },
             livereload: {

@@ -2,4 +2,25 @@
 layout: default
 section: news
 ---
-{{ content }}
+<div class="row-fluid" id="content">
+    <div class="offset1 span7">
+        {{content}}
+    </div>
+
+    <div class="span3 post">
+        <h4>Search</h4>
+        <div class="input-append">
+            <input id="searchBlog" type="text">
+            <span class="add-on"><i class="icon-search"></i></span>
+        </div>
+    </div>
+
+    <div class="span3 post categories">
+        <h4>Categories</h4>
+          {{ site | tag_cloud }}
+    </div>
+
+</div>
+
+
+

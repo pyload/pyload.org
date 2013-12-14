@@ -1,0 +1,16 @@
+<h2><a href="{{p.url}}">{{ include.post.title }}</a>
+    {% if author %}
+        <small>by {{include.post.author}}</small>
+    {% endif %}
+</h2>
+<hr>
+<i class="icon-time"></i> Posted on {{ include.post.date | date: "%B %-d, %Y" }}
+in
+{% for tag in include.post.tags %}
+<a href="/news/category/{{tag}}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
+{% endfor %}
+<hr>
+
+{% if p.subtitle %}
+    <h4>{{ p.subtitle }}</h4>
+{% endif %}

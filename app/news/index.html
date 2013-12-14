@@ -1,19 +1,9 @@
 ---
 layout: news
+title: News
 ---
-{% for p in paginator.posts %}
-<div class="well">
-    <h2><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></h2>
-    {% if p.subtitle %}
-    <h4>{{ p.subtitle }}</h4>
-    {% endif %}
-    <p>
-        {{ p.excerpt }}
-    </p>
 
-    <p><a href="{{ p.url }}">Continue</a></p>
-</div>
-{% endfor %}
+{% include  list_posts.html posts=paginator.posts %}
 
 <div class="pagination">
     <div class="row-fluid">
