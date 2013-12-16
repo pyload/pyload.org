@@ -1,4 +1,4 @@
-pyLoad Site [![Dependency Status](https://david-dm.org/pyload/pyload.org.png)](https://david-dm.org/pyload/pyload.org)
+pyLoad Site [![devDependency Status](https://david-dm.org/pyload/pyload.org/dev-status.png)](https://david-dm.org/pyload/pyload.org#info=devDependencies) 
 ================
 
 To build the pyload website you will need:
